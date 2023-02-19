@@ -68,7 +68,6 @@ class SecondActivity : AppCompatActivity() {
         }
         restartBtn.setOnClickListener {
 
-
             resetTimer()
         }
 
@@ -119,6 +118,8 @@ class SecondActivity : AppCompatActivity() {
 
     private fun previousExercise() {
         prev.setOnClickListener {
+            mTimeLeftInMillis = START_TIME_IN_MILLIS
+
             timeForNextExer()
             if (totalLength == 0) {
                 Toast.makeText(this, "This is first exercise", Toast.LENGTH_SHORT).show()
